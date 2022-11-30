@@ -1,0 +1,10 @@
+{
+  "name": "@react/shared",
+  "description": "所有公用辅助方法及类型定义",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsup"
+  }
+}

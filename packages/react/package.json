@@ -1,0 +1,14 @@
+{
+  "name": "react",
+  "description": "react 公用方法",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.global.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "@react/shared": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsup --format esm,cjs,iife --global-name React"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@mini-react/monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development turbo run dev --parallel",
+    "build": "cross-env NODE_ENV=production turbo run build",
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix",
+    "play": "cd ./play && pnpm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "cross-env": "^7.0.3",
+    "f2elint": "^2.2.1",
+    "tsup": "^6.5.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
+  }
+}
